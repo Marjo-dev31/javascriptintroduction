@@ -1,2 +1,3 @@
-console.log(document)
-console.log('toto')
+// console.log(document)
+// console.log('toto')
+
