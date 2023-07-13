@@ -3,28 +3,35 @@
 // 1. Select the <h1> element by "drilling into the DOM" and 
 //    save it in a variable with a name of your choice
 
-let firstTittle = document.body.children[0]
-console.log(firstTittle)
+let firstTittle = document.body.firstElementChild;
+console.dir(firstTittle);
 
 
 
 // 2. Use the variable from (1) and get access to the "parent"
 //    element of the stored <h1> element (i.e. to the <body> element)
 
-console.dir(firstTittle.parentElement)
+console.dir(firstTittle.parentElement);
 
 //    BONUS: Try using the variable from (1) to get access to the 
 //    sibling element (i.e. the <p> element next to the <h1> element)
 
-console.dir(firstTittle.nextElementSibling)
+console.dir(firstTittle.nextElementSibling);
 
 // 3. Select the <h1> element with getElementById and store in
 //    the same or a new variable (up to you)
 
-
+firstTittle = document.getElementById('maintittle');
+console.dir(firstTittle);
 
 // 4. Select the second <p> element with querySelector (you might
 //    need to add something in the HTML code, e.g. a class) 
 //    and store it in a new variable with a name of your choice
+
+let linkTittle = document.querySelector('.secondparagraph');
+console.dir(linkTittle);
+
 // 5. BONUS TASK: Try changing the text content of the <p> element
 //    you selected in (4) and set it to any other text of your choice
+
+console.dir(document.querySelector('.secondparagraph').textContent = 'This is not a link')
