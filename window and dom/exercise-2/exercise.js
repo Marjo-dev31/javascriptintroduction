@@ -14,18 +14,18 @@ const removeButton = document.getElementById('second-button')
 //    - Output the first button by using the variable in which it's stored
 //    - Output the second button WITHOUT using the variable in which it's stored
 
-function clickFunction() {
-    console.dir(addButton)
-}
+// function clickFunction() {
+//     console.dir(addButton)
+// }
 
-addButton.addEventListener('click', clickFunction)
+// addButton.addEventListener('click', clickFunction)
 
 
-function reclickFunction() {
-    console.dir(document.getElementById('second-button'))
-}
+// function reclickFunction() {
+//     console.dir(document.getElementById('second-button'))
+// }
 
-removeButton.addEventListener('click', reclickFunction)
+// removeButton.addEventListener('click', reclickFunction)
 
 
 // 3) Now select and store the paragraphs mentioned in the text you see on the page
@@ -47,7 +47,26 @@ console.dir(paragraphsSelected)
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
 //    - The second button changes the background color of the first paragraph to blue
 
+function clickFunction() {
+   document.body.children[2].children[3].remove()
+}
+
+addButton.addEventListener('click', clickFunction)
+
+const firstParagraph = document.body.children[2].children[1]
+console.dir(firstParagraph)
+
+function reclickfunction() {
+    firstParagraph.style.backgroundColor = 'blue'
+}
+
+removeButton.addEventListener('click', reclickfunction)
 
 
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
+
+
+paragraphsSelected.classList='classexercise'
+
+console.dir(paragraphsSelected)
